@@ -18,37 +18,30 @@ Predict whether customers will be satisfied (review score ≥ 4) immediately aft
 5. Evaluation – Accuracy, Precision, Recall, F1, AUC, Log Loss
 6. Explainability – SHAP analysis to identify key satisfaction drivers
 
-## 📈 Visuals  
+## Visuals  
 
 ### 1. Dataset Merging Process  
-<img width="916" height="292" alt="image" src="https://github.com/user-attachments/assets/818b715b-6a90-4bc9-a791-0a435fd1db92" /> 
-*This flowchart shows how eight raw datasets (customers, orders, reviews, payments, products, etc.) were merged into a single order-level table (~99k rows). This unified dataset formed the foundation for feature engineering and model building.*  
+<img width="1085" height="342" alt="image" src="https://github.com/user-attachments/assets/3c75a7ff-7ea0-4864-8d9f-64257f9bd98f" />
+This flowchart shows how eight raw datasets (customers, orders, reviews, payments, products, etc.) were merged into a single order-level table (~99k rows). This unified dataset formed the foundation for feature engineering and model building.*  
 
 ---
 
 ### 2. Model Performance Comparison  
 <img width="1079" height="696" alt="image" src="https://github.com/user-attachments/assets/d6eec564-3b1e-48b5-bc92-448d5ea92200" />
-*CatBoost (tuned with Optuna) slightly outperformed Logistic Regression and Stacked models, achieving the highest F1 (0.893) and AUC (0.743) — a strong balance of accuracy and interpretability.*  
+CatBoost (tuned with Optuna) slightly outperformed Logistic Regression and Stacked models, achieving the highest F1 (0.893) and AUC (0.743) — a strong balance of accuracy and interpretability.*  
 
 ---
 
 ### 3. ROC Curve (Logistic vs Stacked vs CatBoost)  
 <img width="1000" height="522" alt="image" src="https://github.com/user-attachments/assets/3fbd5cbc-f58a-4deb-b280-540ba80ee869" />
-*The ROC curves confirm that CatBoost and the Stacked model deliver stronger predictive power (higher AUC) compared to Logistic Regression, validating the choice of CatBoost as the best deployment candidate.*  
+The ROC curves confirm that CatBoost and the Stacked model deliver stronger predictive power (higher AUC) compared to Logistic Regression, validating the choice of CatBoost as the best deployment candidate.*  
 
+## Business Insights  
 
-## Visuals
-<img width="916" height="292" alt="image" src="https://github.com/user-attachments/assets/818b715b-6a90-4bc9-a791-0a435fd1db92" />
-1. Dataset Merging Process
-This flowchart shows how eight raw datasets (customers, orders, reviews, payments, products, etc.) were merged into a single order-level table (~99k rows). This unified dataset formed the foundation for feature engineering and model building.
-- <img width="925" height="691" alt="image" src="https://github.com/user-attachments/assets/8661d9d0-0867-462f-9dad-f869e6a166ad" />
-- <img width="1000" height="522" alt="image" src="https://github.com/user-attachments/assets/3fbd5cbc-f58a-4deb-b280-540ba80ee869" />
-
-## Business Insights
-- Delivery speed matters most → Invest in logistics SLAs and accurate ETAs
-- Late deliveries = churn risk → Proactive vouchers/support for late orders
-- Large/multi-seller orders → Add extra quality control & shipment coordination
-- Regional variation → Tailor strategies for underperforming states
+- Delivery speed matters most** → Longer delivery times strongly reduce satisfaction, so Olist should partner with multiple logistics providers and set stricter SLAs.  
+- Late deliveries = churn risk** → Orders arriving later than promised drive negative reviews, requiring proactive vouchers or apologies to retain customers.  
+- Large/multi-seller orders** → Complex orders lower satisfaction slightly, meaning extra quality control and shipment coordination are needed.  
+- Regional variation** → Some states show lower satisfaction, suggesting region-specific courier partnerships and targeted customer programs.  
 
 ## Tech Stack
 - Python: Pandas, NumPy, Scikit-learn, CatBoost, LightGBM, XGBoost
