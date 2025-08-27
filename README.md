@@ -1,4 +1,4 @@
-<img width="1510" height="691" alt="image" src="https://github.com/user-attachments/assets/3af53bc1-4d5c-45a0-aa9a-d42141709b79" /># Olist-Customer-Satisfaction
+# Olist-Customer-Satisfaction
 Machine learning project using the Olist Brazilian e-commerce dataset (~99k orders). Built an end-to-end pipeline from data preparation and feature engineering to model evaluation. Achieved 82% accuracy (F1 0.893, AUC 0.743), identifying key drivers of customer satisfaction such as delivery speed, late deliveries, and order complexity.
 
 ## Project Objective 
