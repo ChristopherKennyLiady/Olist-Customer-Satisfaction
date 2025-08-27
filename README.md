@@ -19,8 +19,9 @@ Predict whether customers will be satisfied (review score ≥ 4) immediately aft
 6. Explainability – SHAP analysis to identify key satisfaction drivers
 
 ## Visuals
-
-- <img width="916" height="292" alt="image" src="https://github.com/user-attachments/assets/818b715b-6a90-4bc9-a791-0a435fd1db92" />
+<img width="916" height="292" alt="image" src="https://github.com/user-attachments/assets/818b715b-6a90-4bc9-a791-0a435fd1db92" />
+1. Dataset Merging Process
+This flowchart shows how eight raw datasets (customers, orders, reviews, payments, products, etc.) were merged into a single order-level table (~99k rows). This unified dataset formed the foundation for feature engineering and model building.
 - <img width="925" height="691" alt="image" src="https://github.com/user-attachments/assets/8661d9d0-0867-462f-9dad-f869e6a166ad" />
 - <img width="1000" height="522" alt="image" src="https://github.com/user-attachments/assets/3fbd5cbc-f58a-4deb-b280-540ba80ee869" />
 
