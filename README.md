@@ -27,7 +27,7 @@ Predict whether customers will be satisfied (review score ≥ 4) immediately aft
 ---
 
 ### 2. Model Performance Comparison  
-<img width="925" height="691" alt="image" src="https://github.com/user-attachments/assets/8661d9d0-0867-462f-9dad-f869e6a166ad" />
+<img width="1079" height="696" alt="image" src="https://github.com/user-attachments/assets/d6eec564-3b1e-48b5-bc92-448d5ea92200" />
 *CatBoost (tuned with Optuna) slightly outperformed Logistic Regression and Stacked models, achieving the highest F1 (0.893) and AUC (0.743) — a strong balance of accuracy and interpretability.*  
 
 ---
